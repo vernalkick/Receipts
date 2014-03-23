@@ -98,9 +98,6 @@
         [self.library saveImage:image toAlbum:folderName completion:nil failure:nil];
         
     } else {
-        NSLog(@"HELLO WORLD");
-        
-        
         
         [self.library assetForURL:url resultBlock:^(ALAsset *asset) {
             NSDate *date = [asset valueForProperty:ALAssetPropertyDate];
