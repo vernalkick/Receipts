@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <ImageIO/ImageIO.h>
 
 @interface KEVViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (strong, atomic) ALAssetsLibrary* library;
+@property (nonatomic) NSDate *pickerDate;
 
 @end
