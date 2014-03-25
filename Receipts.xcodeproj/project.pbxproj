@@ -20,7 +20,7 @@
 		9C76496A18DD04EB00946F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C76494F18DD04EA00946F15 /* Foundation.framework */; };
 		9C76496B18DD04EB00946F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C76495318DD04EA00946F15 /* UIKit.framework */; };
 		9C76497318DD04EB00946F15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C76497118DD04EB00946F15 /* InfoPlist.strings */; };
-		9C76497518DD04EB00946F15 /* ExpenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C76497418DD04EB00946F15 /* ExpenseTests.m */; };
+		9C76497518DD04EB00946F15 /* ReceiptsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C76497418DD04EB00946F15 /* ReceiptsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		9C76496818DD04EB00946F15 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9C76497018DD04EB00946F15 /* ReceiptsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReceiptsTests-Info.plist"; sourceTree = "<group>"; };
 		9C76497218DD04EB00946F15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9C76497418DD04EB00946F15 /* ExpenseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpenseTests.m; sourceTree = "<group>"; };
+		9C76497418DD04EB00946F15 /* ReceiptsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptsTests.m; sourceTree = "<group>"; };
 		DA61D916955D43D18F2B5304 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +84,8 @@
 		9C76494318DD04EA00946F15 = {
 			isa = PBXGroup;
 			children = (
-				9C76495518DD04EA00946F15 /* Expense */,
-				9C76496E18DD04EB00946F15 /* ExpenseTests */,
+				9C76495518DD04EA00946F15 /* Receipts */,
+				9C76496E18DD04EB00946F15 /* ReceiptsTests */,
 				9C76494E18DD04EA00946F15 /* Frameworks */,
 				9C76494D18DD04EA00946F15 /* Products */,
 				DA61D916955D43D18F2B5304 /* Pods.xcconfig */,
@@ -113,7 +113,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9C76495518DD04EA00946F15 /* Expense */ = {
+		9C76495518DD04EA00946F15 /* Receipts */ = {
 			isa = PBXGroup;
 			children = (
 				9C76495E18DD04EA00946F15 /* KEVAppDelegate.h */,
@@ -123,6 +123,7 @@
 				9C76496118DD04EA00946F15 /* Images.xcassets */,
 				9C76495618DD04EA00946F15 /* Supporting Files */,
 			);
+			name = Receipts;
 			path = Expense;
 			sourceTree = "<group>";
 		};
@@ -137,12 +138,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9C76496E18DD04EB00946F15 /* ExpenseTests */ = {
+		9C76496E18DD04EB00946F15 /* ReceiptsTests */ = {
 			isa = PBXGroup;
 			children = (
-				9C76497418DD04EB00946F15 /* ExpenseTests.m */,
+				9C76497418DD04EB00946F15 /* ReceiptsTests.m */,
 				9C76496F18DD04EB00946F15 /* Supporting Files */,
 			);
+			name = ReceiptsTests;
 			path = ExpenseTests;
 			sourceTree = "<group>";
 		};
@@ -296,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C76497518DD04EB00946F15 /* ExpenseTests.m in Sources */,
+				9C76497518DD04EB00946F15 /* ReceiptsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
