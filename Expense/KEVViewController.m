@@ -24,7 +24,7 @@
     
     UIColor *blue = [UIColor colorWithRed:23/255.0f green:138/255.0f blue:255/255.0f alpha:1.0f];
     
-    UILabel *receipts = [[UILabel alloc] initWithFrame:CGRectMake(0, 130, 320, 70)];
+    UILabel *receipts = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 320, 70)];
     receipts.text = @"Receipts";
     receipts.textAlignment = NSTextAlignmentCenter;
     receipts.textColor = blue;
@@ -32,7 +32,7 @@
     [self.view addSubview:receipts];
     
     
-    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:CGRectMake(0, 130, 320, 70)];
+    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:CGRectMake(0, 150, 320, 70)];
     [self.view addSubview:shimmeringView];
     
     UILabel *loadingLabel = [[UILabel alloc] initWithFrame:shimmeringView.bounds];
@@ -49,7 +49,7 @@
     
     
     
-    UILabel *subtitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 30)];
+    UILabel *subtitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 220, 320, 30)];
     subtitle.text = @"Never forget to log your lunch";
     subtitle.textAlignment = NSTextAlignmentCenter;
     subtitle.textColor = [UIColor colorWithWhite:0 alpha:0.4f];

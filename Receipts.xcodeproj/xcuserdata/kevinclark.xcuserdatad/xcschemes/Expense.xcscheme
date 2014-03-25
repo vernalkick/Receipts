@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9C76494B18DD04EA00946F15"
-            BuildableName = "Expense.app"
-            BlueprintName = "Expense"
-            ReferencedContainer = "container:Expense.xcodeproj">
+            BuildableName = "Receipts.app"
+            BlueprintName = "Receipts"
+            ReferencedContainer = "container:Receipts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9C76494B18DD04EA00946F15"
-            BuildableName = "Expense.app"
-            BlueprintName = "Expense"
-            ReferencedContainer = "container:Expense.xcodeproj">
+            BuildableName = "Receipts.app"
+            BlueprintName = "Receipts"
+            ReferencedContainer = "container:Receipts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

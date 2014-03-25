@@ -37,20 +37,20 @@
 		6FEF16EF6BD040CF9E31B278 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C551C5418DDFBFB00717092 /* KEVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KEVViewController.h; sourceTree = "<group>"; };
 		9C551C5518DDFBFB00717092 /* KEVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KEVViewController.m; sourceTree = "<group>"; };
-		9C76494C18DD04EA00946F15 /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C76494C18DD04EA00946F15 /* Receipts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receipts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C76494F18DD04EA00946F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C76495118DD04EA00946F15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C76495318DD04EA00946F15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		9C76495718DD04EA00946F15 /* Expense-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Expense-Info.plist"; sourceTree = "<group>"; };
+		9C76495718DD04EA00946F15 /* Receipts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Receipts-Info.plist"; sourceTree = "<group>"; };
 		9C76495918DD04EA00946F15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C76495B18DD04EA00946F15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9C76495D18DD04EA00946F15 /* Expense-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expense-Prefix.pch"; sourceTree = "<group>"; };
+		9C76495D18DD04EA00946F15 /* Receipts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Receipts-Prefix.pch"; sourceTree = "<group>"; };
 		9C76495E18DD04EA00946F15 /* KEVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KEVAppDelegate.h; sourceTree = "<group>"; };
 		9C76495F18DD04EA00946F15 /* KEVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KEVAppDelegate.m; sourceTree = "<group>"; };
 		9C76496118DD04EA00946F15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9C76496718DD04EB00946F15 /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C76496718DD04EB00946F15 /* ReceiptsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C76496818DD04EB00946F15 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9C76497018DD04EB00946F15 /* ExpenseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExpenseTests-Info.plist"; sourceTree = "<group>"; };
+		9C76497018DD04EB00946F15 /* ReceiptsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReceiptsTests-Info.plist"; sourceTree = "<group>"; };
 		9C76497218DD04EB00946F15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C76497418DD04EB00946F15 /* ExpenseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpenseTests.m; sourceTree = "<group>"; };
 		DA61D916955D43D18F2B5304 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 		9C76494D18DD04EA00946F15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C76494C18DD04EA00946F15 /* Expense.app */,
-				9C76496718DD04EB00946F15 /* ExpenseTests.xctest */,
+				9C76494C18DD04EA00946F15 /* Receipts.app */,
+				9C76496718DD04EB00946F15 /* ReceiptsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,10 +129,10 @@
 		9C76495618DD04EA00946F15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9C76495718DD04EA00946F15 /* Expense-Info.plist */,
+				9C76495718DD04EA00946F15 /* Receipts-Info.plist */,
 				9C76495818DD04EA00946F15 /* InfoPlist.strings */,
 				9C76495B18DD04EA00946F15 /* main.m */,
-				9C76495D18DD04EA00946F15 /* Expense-Prefix.pch */,
+				9C76495D18DD04EA00946F15 /* Receipts-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 		9C76496F18DD04EB00946F15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9C76497018DD04EB00946F15 /* ExpenseTests-Info.plist */,
+				9C76497018DD04EB00946F15 /* ReceiptsTests-Info.plist */,
 				9C76497118DD04EB00946F15 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -158,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C76494B18DD04EA00946F15 /* Expense */ = {
+		9C76494B18DD04EA00946F15 /* Receipts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C76497818DD04EB00946F15 /* Build configuration list for PBXNativeTarget "Expense" */;
+			buildConfigurationList = 9C76497818DD04EB00946F15 /* Build configuration list for PBXNativeTarget "Receipts" */;
 			buildPhases = (
 				C6670DB0E1FB42398E32D845 /* Check Pods Manifest.lock */,
 				9C76494818DD04EA00946F15 /* Sources */,
@@ -172,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = Expense;
+			name = Receipts;
 			productName = Expense;
-			productReference = 9C76494C18DD04EA00946F15 /* Expense.app */;
+			productReference = 9C76494C18DD04EA00946F15 /* Receipts.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C76496618DD04EB00946F15 /* ExpenseTests */ = {
+		9C76496618DD04EB00946F15 /* ReceiptsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C76497B18DD04EB00946F15 /* Build configuration list for PBXNativeTarget "ExpenseTests" */;
+			buildConfigurationList = 9C76497B18DD04EB00946F15 /* Build configuration list for PBXNativeTarget "ReceiptsTests" */;
 			buildPhases = (
 				9C76496318DD04EB00946F15 /* Sources */,
 				9C76496418DD04EB00946F15 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				9C76496D18DD04EB00946F15 /* PBXTargetDependency */,
 			);
-			name = ExpenseTests;
+			name = ReceiptsTests;
 			productName = ExpenseTests;
-			productReference = 9C76496718DD04EB00946F15 /* ExpenseTests.xctest */;
+			productReference = 9C76496718DD04EB00946F15 /* ReceiptsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C76494718DD04EA00946F15 /* Build configuration list for PBXProject "Expense" */;
+			buildConfigurationList = 9C76494718DD04EA00946F15 /* Build configuration list for PBXProject "Receipts" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -222,8 +222,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C76494B18DD04EA00946F15 /* Expense */,
-				9C76496618DD04EB00946F15 /* ExpenseTests */,
+				9C76494B18DD04EA00946F15 /* Receipts */,
+				9C76496618DD04EB00946F15 /* ReceiptsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* Begin PBXTargetDependency section */
 		9C76496D18DD04EB00946F15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C76494B18DD04EA00946F15 /* Expense */;
+			target = 9C76494B18DD04EA00946F15 /* Receipts */;
 			targetProxy = 9C76496C18DD04EB00946F15 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -407,10 +407,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Expense/Expense-Prefix.pch";
-				INFOPLIST_FILE = "Expense/Expense-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Expense/Receipts-Prefix.pch";
+				INFOPLIST_FILE = "Expense/Receipts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = Receipts;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,10 +423,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Expense/Expense-Prefix.pch";
-				INFOPLIST_FILE = "Expense/Expense-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Expense/Receipts-Prefix.pch";
+				INFOPLIST_FILE = "Expense/Receipts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = Receipts;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -445,8 +447,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ExpenseTests/ExpenseTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ExpenseTests/ReceiptsTests-Info.plist";
+				PRODUCT_NAME = ReceiptsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -463,8 +465,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Expense/Expense-Prefix.pch";
-				INFOPLIST_FILE = "ExpenseTests/ExpenseTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ExpenseTests/ReceiptsTests-Info.plist";
+				PRODUCT_NAME = ReceiptsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -473,7 +475,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C76494718DD04EA00946F15 /* Build configuration list for PBXProject "Expense" */ = {
+		9C76494718DD04EA00946F15 /* Build configuration list for PBXProject "Receipts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C76497618DD04EB00946F15 /* Debug */,
@@ -482,7 +484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C76497818DD04EB00946F15 /* Build configuration list for PBXNativeTarget "Expense" */ = {
+		9C76497818DD04EB00946F15 /* Build configuration list for PBXNativeTarget "Receipts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C76497918DD04EB00946F15 /* Debug */,
@@ -491,7 +493,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C76497B18DD04EB00946F15 /* Build configuration list for PBXNativeTarget "ExpenseTests" */ = {
+		9C76497B18DD04EB00946F15 /* Build configuration list for PBXNativeTarget "ReceiptsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C76497C18DD04EB00946F15 /* Debug */,
