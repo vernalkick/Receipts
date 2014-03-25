@@ -22,20 +22,37 @@
     
     self.library = [[ALAssetsLibrary alloc] init];
     
-
+    UIColor *blue = [UIColor colorWithRed:23/255.0f green:138/255.0f blue:255/255.0f alpha:1.0f];
     
-    UIButton *selectPicture = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 320, 274)];
+    UILabel *receipts = [[UILabel alloc] initWithFrame:CGRectMake(0, 130, 320, 70)];
+    receipts.text = @"Receipts";
+    receipts.textAlignment = NSTextAlignmentCenter;
+    receipts.textColor = blue;
+    receipts.font = [UIFont fontWithName:@"HelveticaNeue-thin" size:60];
+    [self.view addSubview:receipts];
+    
+    UILabel *subtitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 30)];
+    subtitle.text = @"Never forget to log your lunch";
+    subtitle.textAlignment = NSTextAlignmentCenter;
+    subtitle.textColor = [UIColor colorWithWhite:0 alpha:0.4f];
+    subtitle.font = [UIFont fontWithName:@"HelveticaNeue-light" size:18];
+    [self.view addSubview:subtitle];
+    
+    UIButton *selectPicture = [[UIButton alloc] initWithFrame:CGRectMake(20, 385, 280, 55)];
     [selectPicture setTitle:@"Choose from library" forState:UIControlStateNormal];
-    selectPicture.backgroundColor = [UIColor colorWithRed:0/255.0f green:156/255.0f blue:255/255.0f alpha:1.0f];
+    selectPicture.backgroundColor = blue;
+    selectPicture.layer.cornerRadius = 8;
     [selectPicture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [selectPicture addTarget:self action:@selector(selectPicture:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:selectPicture];
 
     
-    UIButton *takePicture = [[UIButton alloc] initWithFrame:CGRectMake(0, 294, 320, 274)];
-    takePicture.backgroundColor = [UIColor colorWithRed:0/255.0f green:137/255.0f blue:224/255.0f alpha:1.0f];
+    UIButton *takePicture = [[UIButton alloc] initWithFrame:CGRectMake(20, 460, 280, 55)];
+    takePicture.layer.cornerRadius = 8;
+    takePicture.layer.borderWidth = 1.0;
+    takePicture.layer.borderColor = blue.CGColor;
     [takePicture setTitle:@"Take a Picture" forState:UIControlStateNormal];
-    [takePicture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [takePicture setTitleColor:blue forState:UIControlStateNormal];
     [takePicture addTarget:self action:@selector(takePicture:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:takePicture];
     
