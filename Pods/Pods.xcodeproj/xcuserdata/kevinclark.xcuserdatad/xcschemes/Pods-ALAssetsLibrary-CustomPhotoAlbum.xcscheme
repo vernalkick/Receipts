@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "38631FD1193240FC917B6DA3"
+               BlueprintIdentifier = "3FE4F1838BBA4BC182523D62"
                BuildableName = "libPods-ALAssetsLibrary-CustomPhotoAlbum.a"
                BlueprintName = "Pods-ALAssetsLibrary-CustomPhotoAlbum"
                ReferencedContainer = "container:Pods.xcodeproj">

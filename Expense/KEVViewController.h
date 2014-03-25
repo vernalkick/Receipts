@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <ImageIO/ImageIO.h>
+#import <CTAssetsPickerController.h>
 
-@interface KEVViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface KEVViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CTAssetsPickerControllerDelegate>
 
 @property (strong, atomic) ALAssetsLibrary* library;
 @property (nonatomic) NSDate *pickerDate;

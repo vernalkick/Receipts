@@ -24,17 +24,18 @@
     
 
     
-    UIButton *selectPicture = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, 320, 360)];
+    UIButton *selectPicture = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 320, 274)];
     [selectPicture setTitle:@"Choose from library" forState:UIControlStateNormal];
-    [selectPicture setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    selectPicture.backgroundColor = [UIColor colorWithRed:0/255.0f green:156/255.0f blue:255/255.0f alpha:1.0f];
+    [selectPicture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [selectPicture addTarget:self action:@selector(selectPicture:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:selectPicture];
 
     
-    UIButton *takePicture = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, 320, 60)];
-    takePicture.backgroundColor = [UIColor redColor];
+    UIButton *takePicture = [[UIButton alloc] initWithFrame:CGRectMake(0, 294, 320, 274)];
+    takePicture.backgroundColor = [UIColor colorWithRed:0/255.0f green:137/255.0f blue:224/255.0f alpha:1.0f];
     [takePicture setTitle:@"Take a Picture" forState:UIControlStateNormal];
-    [takePicture setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [takePicture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [takePicture addTarget:self action:@selector(takePicture:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:takePicture];
     
@@ -56,32 +57,18 @@
 }
 
 -(void)selectPicture:(UIButton *)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = NO;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
+    picker.assetsFilter = [ALAssetsFilter allPhotos];
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)editingInfo {
+
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     
-    UIImage *image = editingInfo[UIImagePickerControllerEditedImage];
-    
-    NSURL *url = [editingInfo objectForKey:@"UIImagePickerControllerReferenceURL"];
-    
-    if (url == nil) {
-        
-        
-        NSDictionary *metadata = [editingInfo objectForKey:UIImagePickerControllerMediaMetadata];
-        NSDictionary *exifMetadata = [metadata objectForKey:(id)kCGImagePropertyExifDictionary];
-        NSString *pictureDate = [exifMetadata objectForKey:@"DateTimeOriginal"];
-        
-        
-        // Convert string to date object
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"yyyy:MM:d HH:mm:ss"];
-        NSDate *date = [dateFormat dateFromString:pictureDate];
+
+        NSDate *date = [NSDate date];
         
         NSLog(@"Picture taken: %@", date);
         
@@ -94,42 +81,42 @@
         NSString *folderName = [@"Receipt - " stringByAppendingString:[[[prettyDate stringFromDate:nextMonday] stringByAppendingString:@" - "] stringByAppendingString:[prettyDate stringFromDate:nextFriday]]];
         
         NSLog(@"FOLDER NAME: %@", folderName);
+        NSLog(@"%@", image);
         
         [self.library saveImage:image toAlbum:folderName completion:nil failure:nil];
-        
-    } else {
-        NSLog(@"HELLO WORLD");
-        
-        
-        
-        [self.library assetForURL:url resultBlock:^(ALAsset *asset) {
-            NSDate *date = [asset valueForProperty:ALAssetPropertyDate];
- 
-            NSDate *nextMonday = [self previousMondayFromDate:date];
-            NSDate *nextFriday = [self nextFridayFromDate:date];
-            
-            NSDateFormatter *prettyDate = [[NSDateFormatter alloc] init];
-            [prettyDate setDateFormat:@"LLLL d"];
-            
-            NSString *folderName = [@"Receipt - " stringByAppendingString:[[[prettyDate stringFromDate:nextMonday] stringByAppendingString:@" - "] stringByAppendingString:[prettyDate stringFromDate:nextFriday]]];
-            
-            NSLog(@"FOLDER NAME: %@", folderName);
-            
-            [self.library saveImage:image toAlbum:folderName completion:nil failure:nil];
-            
-        } failureBlock:^(NSError *error) {
-            NSLog(@"Error");
-        }];
-        
-        
-        
-    }
+
     
     
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
+
+
+- (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets  {
+    
+    for (id image in assets) {
+
+        
+        NSDate *date = [image valueForProperty:ALAssetPropertyDate];
+        
+        NSDate *nextMonday = [self previousMondayFromDate:date];
+        NSDate *nextFriday = [self nextFridayFromDate:date];
+        
+        NSDateFormatter *prettyDate = [[NSDateFormatter alloc] init];
+        [prettyDate setDateFormat:@"LLLL d"];
+        
+        NSString *folderName = [@"Receipt - " stringByAppendingString:[[[prettyDate stringFromDate:nextMonday] stringByAppendingString:@" - "] stringByAppendingString:[prettyDate stringFromDate:nextFriday]]];
+        
+        UIImage *img = [UIImage imageWithCGImage:[[image defaultRepresentation] fullResolutionImage]];
+        
+        [self.library saveImage:img toAlbum:folderName completion:nil failure:nil];
+       
+    }
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
