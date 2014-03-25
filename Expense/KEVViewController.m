@@ -31,6 +31,24 @@
     receipts.font = [UIFont fontWithName:@"HelveticaNeue-thin" size:60];
     [self.view addSubview:receipts];
     
+    
+    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:CGRectMake(0, 130, 320, 70)];
+    [self.view addSubview:shimmeringView];
+    
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:shimmeringView.bounds];
+    loadingLabel.textAlignment = NSTextAlignmentCenter;
+    loadingLabel.text = @"Receipts";
+    loadingLabel.textColor = [UIColor colorWithRed:0/255.0f green:186/255.0f blue:255/255.0f alpha:1.0f];
+    loadingLabel.font = [UIFont fontWithName:@"HelveticaNeue-thin" size:60];
+    shimmeringView.contentView = loadingLabel;
+    shimmeringView.shimmeringOpacity = 0;
+    
+    // Start shimmering.
+    shimmeringView.shimmering = YES;
+    
+    
+    
+    
     UILabel *subtitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 30)];
     subtitle.text = @"Never forget to log your lunch";
     subtitle.textAlignment = NSTextAlignmentCenter;
@@ -38,23 +56,26 @@
     subtitle.font = [UIFont fontWithName:@"HelveticaNeue-light" size:18];
     [self.view addSubview:subtitle];
     
-    UIButton *selectPicture = [[UIButton alloc] initWithFrame:CGRectMake(20, 385, 280, 55)];
+    UIButton *takePicture = [[UIButton alloc] initWithFrame:CGRectMake(20, 415, 280, 55)];
+    takePicture.backgroundColor = blue;
+    takePicture.layer.cornerRadius = 8;
+    [takePicture setTitle:@"Take a Picture" forState:UIControlStateNormal];
+    [takePicture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [takePicture addTarget:self action:@selector(takePicture:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:takePicture];
+    
+    
+    UIButton *selectPicture = [[UIButton alloc] initWithFrame:CGRectMake(20, 490, 280, 55)];
     [selectPicture setTitle:@"Choose from library" forState:UIControlStateNormal];
-    selectPicture.backgroundColor = blue;
     selectPicture.layer.cornerRadius = 8;
-    [selectPicture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    selectPicture.layer.borderWidth = 1.0;
+    selectPicture.layer.borderColor = blue.CGColor;
+    [selectPicture setTitleColor:blue forState:UIControlStateNormal];
     [selectPicture addTarget:self action:@selector(selectPicture:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:selectPicture];
 
     
-    UIButton *takePicture = [[UIButton alloc] initWithFrame:CGRectMake(20, 460, 280, 55)];
-    takePicture.layer.cornerRadius = 8;
-    takePicture.layer.borderWidth = 1.0;
-    takePicture.layer.borderColor = blue.CGColor;
-    [takePicture setTitle:@"Take a Picture" forState:UIControlStateNormal];
-    [takePicture setTitleColor:blue forState:UIControlStateNormal];
-    [takePicture addTarget:self action:@selector(takePicture:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:takePicture];
+
     
 
 }
