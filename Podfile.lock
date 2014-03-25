@@ -1,10 +1,13 @@
 PODS:
   - ALAssetsLibrary-CustomPhotoAlbum (1.1.5)
+  - CTAssetsPickerController (2.0.0)
 
 DEPENDENCIES:
   - ALAssetsLibrary-CustomPhotoAlbum (~> 1.1)
+  - CTAssetsPickerController (~> 2.0.0)
 
 SPEC CHECKSUMS:
   ALAssetsLibrary-CustomPhotoAlbum: 1a60eddafc065a5f1e05786f7850448d8cf2cbf5
+  CTAssetsPickerController: 31a69874c2ece32edfc803b94a738d5ced8974d5
 
 COCOAPODS: 0.29.0

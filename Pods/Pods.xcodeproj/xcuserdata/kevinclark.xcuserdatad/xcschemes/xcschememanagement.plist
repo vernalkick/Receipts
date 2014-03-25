@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-CTAssetsPickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>38631FD1193240FC917B6DA3</key>
+		<key>3FE4F1838BBA4BC182523D62</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3EDF75AABF04B9AA9FD1120</key>
+		<key>51FE6BF7C3804BFC88687E67</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E520D9C06F2E440EBC5E95AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
